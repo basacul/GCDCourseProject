@@ -47,9 +47,11 @@ unzip("dataset.zip")
       y_train <- read.table("./UCI HAR Dataset/train/Y_train.txt", 
                             stringsAsFactors = FALSE)
       train <- cbind(subject_train, x_train, y_train)
-      names(train) <- c("Subject", "Group" , features[,2] , "Activity")
 
-      
+            
+#4. Appropriately labels the data set with descriptive variable names. 
+#done as second step
+names(train) <- c("Subject", "Group" , features[,2] , "Activity")
 
 
 library(dplyr)
@@ -58,7 +60,9 @@ library(dplyr)
 dataframe <- bind_rows(test,train)
 
 #remove variables in the working environment to free some memory space
-rm("url","subject_test", "x_test", "y_test", "test", "subject_train", "x_train", "y_train", "train")
+rm("url","subject_test", "x_test", "y_test", 
+   "test", "subject_train", "x_train", "y_train", 
+   "activity_label", "features", "train")
 
 #2, Extracts only the measurements on the mean and standard deviation for each measurement
 # as well as subject and activity column
@@ -89,8 +93,7 @@ for (i in 1:l){
       }
 }
 
-#4. Appropriately labels the data set with descriptive variable names. 
-#to do: look in the forum
+
 
 #5. From the data set in step 4, creates a second, independent tidy data set with 
 #the average of each variable for each activity  and each subject.

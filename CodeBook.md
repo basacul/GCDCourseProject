@@ -36,91 +36,91 @@ source url includes.
 -----------------------------
 | Variable | Description
 -----------|-------------
-| Subject |                           
-| Activity |                           
-| tBodyAcc.mean...X |                   
-| tBodyAcc.mean...Y |                 
-| tBodyAcc.mean...Z |                  
-| tGravityAcc.mean...X |               
-| tGravityAcc.mean...Y |               
-| tGravityAcc.mean...Z |              
-| tBodyAccJerk.mean...X |        
-| tBodyAccJerk.mean...Y |              
-| tBodyAccJerk.mean...Z |              
-| tBodyGyro.mean...X |             
-| tBodyGyro.mean...Y |                 
-| tBodyGyro.mean...Z |                 
-| tBodyGyroJerk.mean...X |              
-| tBodyGyroJerk.mean...Y |             
-| tBodyGyroJerk.mean...Z |             
-| tBodyAccMag.mean.. |                  
-| tGravityAccMag.mean.. |              
-| tBodyAccJerkMag.mean.. |             
-| tBodyGyroMag.mean.. |                 
-| tBodyGyroJerkMag.mean.. |             
-| fBodyAcc.mean...X |                   
-| fBodyAcc.mean...Y |                  
-| fBodyAcc.mean...Z |                  
-| fBodyAcc.meanFreq...X |              
+| Subject | Subject ID                       
+| Activity | Performed Activity                           
+| tBodyAcc.mean...X | Mean time of the body's acceleration in the x-axis                  
+| tBodyAcc.mean...Y | Mean time of the body's acceleration in the y-axis               
+| tBodyAcc.mean...Z | Mean time of the body's acceleration in the z-axis                 
+| tGravityAcc.mean...X | Mean time of the gravity's acceleration in the x-axis       
+| tGravityAcc.mean...Y | Mean time of the gravity's acceleration in the y-axis            
+| tGravityAcc.mean...Z | Mean time of the gravity's acceleration in the z-axis              
+| tBodyAccJerk.mean...X | Mean time of body's jerk acceleration in the x-axis      
+| tBodyAccJerk.mean...Y | Mean time of body's jerk acceleration in the y-axis             
+| tBodyAccJerk.mean...Z | Mean time of body's jerk acceleration in the z-axis             
+| tBodyGyro.mean...X | Mean time of the body's gyroscope measurement in the x-axis            
+| tBodyGyro.mean...Y | Mean time of the body's gyroscope measurement in the y-axis                
+| tBodyGyro.mean...Z | Mean time of the body's gyroscope measurement in the z-axis                
+| tBodyGyroJerk.mean...X | Mean time of the body's jerk gyroscope measurement in the x-axis             
+| tBodyGyroJerk.mean...Y | Mean time of the body's jerk gyroscope measurement in the y-axis                         
+| tBodyGyroJerk.mean...Z | Mean time of the body's jerk gyroscope measurement in the z-axis                        
+| tBodyAccMag.mean.. | Mean time of the body's acceleration magnitude               
+| tGravityAccMag.mean.. | Mean time of the gravity's acceleration magnitude          
+| tBodyAccJerkMag.mean.. | Mean time of the body's jerk acceleration magnitude            
+| tBodyGyroMag.mean.. | Mean time of the body's gyroscope measurement magnitude                
+| tBodyGyroJerkMag.mean.. | Mean time of the body's jerk gyroscope measurement magnitude          
+| fBodyAcc.mean...X | Mean frequency of the body's acceleration in the x-axis                 
+| fBodyAcc.mean...Y | Mean frequency of the body's acceleration in the y-axis                  
+| fBodyAcc.mean...Z | Mean frequency of the body's acceleration in the z-axis                 
+| fBodyAcc.meanFreq...X |             
 | fBodyAcc.meanFreq...Y |              
 | fBodyAcc.meanFreq...Z |              
-| fBodyAccJerk.mean...X |              
-| fBodyAccJerk.mean...Y |              
-| fBodyAccJerk.mean...Z |              
+| fBodyAccJerk.mean...X | Mean frequency of the body's jerk acceleration in the x-axis             
+| fBodyAccJerk.mean...Y | Mean frequency of the body's jerk acceleration in the y-axis             
+| fBodyAccJerk.mean...Z | Mean frequency of the body's jerk acceleration in the z-axis             
 | fBodyAccJerk.meanFreq...X |          
 | fBodyAccJerk.meanFreq...Y |          
 | fBodyAccJerk.meanFreq...Z |          
-| fBodyGyro.mean...X |                  
-| fBodyGyro.mean...Y |                 
-| fBodyGyro.mean...Z |                 
+| fBodyGyro.mean...X | Mean frequency of the body's gyroscope measurement in the x-axis                 
+| fBodyGyro.mean...Y | Mean frequency of the body's gyroscope measurement in the y-axis                 
+| fBodyGyro.mean...Z | Mean frequency of the body's gyroscope measurement in the z-axis                
 | fBodyGyro.meanFreq...X |              
 | fBodyGyro.meanFreq...Y |             
 | fBodyGyro.meanFreq...Z |             
-| fBodyAccMag.mean.. |                
-| fBodyAccMag.meanFreq.. |              
-| fBodyBodyAccJerkMag.mean.. |         
+| fBodyAccMag.mean.. | Mean frequency of the body's acceleration magnitude             
+| fBodyAccMag.meanFreq.. |             
+| fBodyBodyAccJerkMag.mean.. | Mean frequency of the body's jerk acceleration magnitude         
 | fBodyBodyAccJerkMag.meanFreq.. |      
-| fBodyBodyGyroMag.mean.. |             
+| fBodyBodyGyroMag.mean.. | Mean frequency of the body's gyroscope measurement magnitude            
 | fBodyBodyGyroMag.meanFreq.. |         
-| fBodyBodyGyroJerkMag.mean.. |        
+| fBodyBodyGyroJerkMag.mean.. |  Mean frequency of the body's jerk gyroscope measurement magnitude      
 | fBodyBodyGyroJerkMag.meanFreq.. |     
-| angle.tBodyAccMean.gravity. |         
-| angle.tBodyAccJerkMean..gravityMean. |
-| angle.tBodyGyroMean.gravityMean. |    
-| angle.tBodyGyroJerkMean.gravityMean. |
-| angle.X.gravityMean. |               
-| angle.Y.gravityMean. |               
-| angle.Z.gravityMean. |                
-| tBodyAcc.std...X |                   
-| tBodyAcc.std...Y |                   
-| tBodyAcc.std...Z |                    
-| tGravityAcc.std...X |                
-| tGravityAcc.std...Y |                
-| tGravityAcc.std...Z |                
-| tBodyAccJerk.std...X |               
-| tBodyAccJerk.std...Y |               
-| tBodyAccJerk.std...Z |               
-| tBodyGyro.std...X |                  
-| tBodyGyro.std...Y |                  
-| tBodyGyro.std...Z |                  
-| tBodyGyroJerk.std...X |              
-| tBodyGyroJerk.std...Y |              
-| tBodyGyroJerk.std...Z |               
-| tBodyAccMag.std.. |                   
-| tGravityAccMag.std.. |                
-| tBodyAccJerkMag.std.. |               
-| tBodyGyroMag.std.. |                  
-| tBodyGyroJerkMag.std.. |        
-| fBodyAcc.std...X |                   
-| fBodyAcc.std...Y |                   
-| fBodyAcc.std...Z |                    
-| fBodyAccJerk.std...X |               
-| fBodyAccJerk.std...Y |               
-| fBodyAccJerk.std...Z |                
-| fBodyGyro.std...X |                  
-| fBodyGyro.std...Y |                  
-| fBodyGyro.std...Z |                  
+| angle.tBodyAccMean.gravity. | Mean time of the body's angular gravity acceleration        
+| angle.tBodyAccJerkMean..gravityMean. | Mean time of the angular acceleration of the body's jerk acceleration and mean gravity
+| angle.tBodyGyroMean.gravityMean. | Mean time of the angular acceleration of the body's gyroscope measurement and mean gravity   
+| angle.tBodyGyroJerkMean.gravityMean. | Mean time of the angular acceleration of the body's jerk gyroscope measurement and mean gravity
+| angle.X.gravityMean. | Mean of the angular gravitiy acceleration in the x-axis 
+| angle.Y.gravityMean. | Mean of the angular gravitiy acceleration in the y-axis 
+| angle.Z.gravityMean. | Mean of the angular gravitiy acceleration in the z-axis 
+| tBodyAcc.std...X | Standard deviation of the time of the body's acceleration in the x-axis                  
+| tBodyAcc.std...Y | Standard deviation of the time of the body's acceleration in the y-axis                   
+| tBodyAcc.std...Z | Standard deviation of the time of the body's acceleration in the z-axis                   
+| tGravityAcc.std...X | Standard deviation of the time of the gravity's acceleration in the x-axis               
+| tGravityAcc.std...Y | Standard deviation of the time of the gravity's acceleration in the y-axis              
+| tGravityAcc.std...Z | Standard deviation of the time of the gravity's acceleration in the z-axis               
+| tBodyAccJerk.std...X | Standard deviation of the time of the body's jerk acceleration in the x-axis              
+| tBodyAccJerk.std...Y | Standard deviation of the time of the body's jerk acceleration in the y-axis               
+| tBodyAccJerk.std...Z | Standard deviation of the time of the body's jerk acceleration in the z-axis              
+| tBodyGyro.std...X | Standard deviation of the time of the body's gyroscope measurment in the x-axis                
+| tBodyGyro.std...Y | Standard deviation of the time of the body's gyroscope measurment in the y-axis                 
+| tBodyGyro.std...Z | Standard deviation of the time of the body's gyroscope measurment in the z-axis                 
+| tBodyGyroJerk.std...X | Standard deviation of the time of the body's jerk gyroscope measurment in the x-axis             
+| tBodyGyroJerk.std...Y | Standard deviation of the time of the body's jerk gyroscope measurment in the y-axis           
+| tBodyGyroJerk.std...Z | Standard deviation of the time of the body's jerk gyroscope measurment in the z-axis             
+| tBodyAccMag.std.. | Standard deviation of the time of the body's acceleration magnitude                  
+| tGravityAccMag.std.. | Standard deviation of the time of the gravity's acceleration magnitude               
+| tBodyAccJerkMag.std.. | Standard deviation of the time of the body's jerk acceleration magnitude              
+| tBodyGyroMag.std.. | Standard deviation of the time of the body's gyroscope measurement magnitude                
+| tBodyGyroJerkMag.std.. | Standard deviation of the time of the body's jerk gyroscope measuremant magnitude       
+| fBodyAcc.std...X | Standard deviation of the frequency of the body's acceleration in the x-axis                 
+| fBodyAcc.std...Y | Standard deviation of the frequency of the body's acceleration in the y-axis                  
+| fBodyAcc.std...Z | Standard deviation of the frequency of the body's acceleration in the z-axis                   
+| fBodyAccJerk.std...X | Standard deviation of the frequency of the body's jerk acceleration in the x-axis               
+| fBodyAccJerk.std...Y | Standard deviation of the frequency of the body's jerk acceleration in the y-axis              
+| fBodyAccJerk.std...Z | Standard deviation of the frequency of the body's jerk acceleration in the z-axis               
+| fBodyGyro.std...X | Standard deviation of the frequency of the body's gyroscope measurement in the x-axis                
+| fBodyGyro.std...Y | Standard deviation of the frequency of the body's gyroscope measurement in the y-axis                 
+| fBodyGyro.std...Z | Standard deviation of the frequency of the body's gyroscope measurement in the z-axis                 
 | fBodyAccMag.std.. |                   
-| fBodyBodyAccJerkMag.std.. |           
-| fBodyBodyGyroMag.std.. |              
-| fBodyBodyGyroJerkMag.std.. |
+| fBodyBodyAccJerkMag.std.. | Standard deviation of the frequency of the body's jerk acceleration magnitude    
+| fBodyBodyGyroMag.std.. | Standard deviation of the frequency of the body's gyroscope measurement magnitude            
+| fBodyBodyGyroJerkMag.std.. | Standard deviation of the frequency of the body's jerk gyroscope measurement magnitude
