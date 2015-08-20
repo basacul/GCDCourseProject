@@ -95,8 +95,8 @@ for (i in 1:l){
 #5. From the data set in step 4, creates a second, independent tidy data set with 
 #the average of each variable for each activity  and each subject.
 library(plyr)
-tidy_data <- ddply(by_activity_and_subject, .(Subject, Activity), numcolwise(mean))
-tidy_data
+tidy_data <- ddply(subset, .(Subject, Activity), numcolwise(mean))
+
 
 #   upload the tidy data set as .txt file created with write.table() using 
 #   row.name = FALSE (do not cut and paste a dataset int the text box, as 
