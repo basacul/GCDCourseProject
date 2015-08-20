@@ -85,8 +85,8 @@ source url includes.
 | fBodyBodyGyroJerkMag.mean.. |  Mean frequency of the body's jerk gyroscope measurement magnitude      
 | fBodyBodyGyroJerkMag.meanFreq.. |     
 | angle.tBodyAccMean.gravity. | Mean time of the body's angular gravity acceleration        
-| angle.tBodyAccJerkMean..gravityMean. | Mean time of the angular acceleration of the body's jerk acceleration and mean gravity
-| angle.tBodyGyroMean.gravityMean. | Mean time of the angular acceleration of the body's gyroscope measurement and mean gravity   
+| angle.tBodyAccJerkMean..gravityMean. | Mean time of the angular acceleration of the body's jerk acceleration with the mean of the gravity
+| angle.tBodyGyroMean.gravityMean. | Mean time of the angular acceleration of the body's gyroscope measurement with the mean of the gravity   
 | angle.tBodyGyroJerkMean.gravityMean. | Mean time of the angular acceleration of the body's jerk gyroscope measurement and mean gravity
 | angle.X.gravityMean. | Mean of the angular gravitiy acceleration in the x-axis 
 | angle.Y.gravityMean. | Mean of the angular gravitiy acceleration in the y-axis 
@@ -120,7 +120,7 @@ source url includes.
 | fBodyGyro.std...X | Standard deviation of the frequency of the body's gyroscope measurement in the x-axis                
 | fBodyGyro.std...Y | Standard deviation of the frequency of the body's gyroscope measurement in the y-axis                 
 | fBodyGyro.std...Z | Standard deviation of the frequency of the body's gyroscope measurement in the z-axis                 
-| fBodyAccMag.std.. |                   
+| fBodyAccMag.std.. | Standard deviation of the frequency of the body's acceleration magnitude                  
 | fBodyBodyAccJerkMag.std.. | Standard deviation of the frequency of the body's jerk acceleration magnitude    
 | fBodyBodyGyroMag.std.. | Standard deviation of the frequency of the body's gyroscope measurement magnitude            
 | fBodyBodyGyroJerkMag.std.. | Standard deviation of the frequency of the body's jerk gyroscope measurement magnitude
