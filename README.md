@@ -4,33 +4,18 @@
 -------------------------------
 This repository consists of the followin files:
 
-1. ReadME.md 
+1. README.md 
       This file explains how all of the scripts work and 
       how they are connected
 
 2. CodeBook.md
-      This file describes the source of the data, the processing 
-      of the data, and especially the variables of the output of run the            
-      tidy_data.txt file. 
+This file describes the source of the data, the processing of the data, and especially the variables the tidydata.txt file which represents a data set created with run_analysis.R. 
 
 3. run_analysis.R
-      This script allows to download the data from an experiment, where
-      30 participants concluded 6 different activites measured with
-      a Samsung Galaxy SII smartphone and process the data to a
-      text file tidy_data.txt
+This script allows to download the data from an experiment, where 30 participants concluded 6 different activites measured with a Samsung Galaxy SII smartphone and process the data to a text file tidydata.txt
 
-4. GCDCourseProject.Rproj (REDUNDANT)
-      File that is internally used in my RStudio application to
-      work on this project
-      
-5. .RData (Redundant)
-      File that is internally used in my RStudio application to
-      work on this project
-
-6. .gitignore (REDUNDANT)
-      As the name suggests: ignore it. It's just a git file internally
-      used on my workstation
-
+4. tidydata
+A .txt file consisting of the tidy data set created with run_analysis.R as output with 180 rows and 62 columns. The columns variables are described in the CodeBook.md and only variables names measuring the mean or standard deviation that are clearly specified in the feature help text file were included
 
 ##How this works
 ------------------
@@ -55,6 +40,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smar    
   standing or laying)
   
 6.Creates a tidy data set with the mean value for each variable according to the 
-  subject and activity, such that a 180 rows X 88 columns data set is created
+  subject and activity, such that a 180 rows X 81 columns data set is created
 
-7.Saves the tidy data set as a text file named tidy_data.txt
+7.Saves the tidy data set as a text file named tidydata.txt

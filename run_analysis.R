@@ -13,6 +13,7 @@ unzip("dataset.zip")
 #features represent the column variables of both x_* files,
 #activity_labels is a reference for the y_* files
 ##################################################################################################
+
 features <-             read.table("./UCI HAR Dataset/features.txt", 
                         stringsAsFactors = FALSE)
 activity_labels <-      read.table("./UCI HAR Dataset/activity_labels.txt", 
@@ -28,9 +29,9 @@ y_test <-               read.table("./UCI HAR Dataset/test/y_test.txt",
 
 #cbind plus add column indicating that it is a test subject with 0
 test <-                 cbind(subject_test, 
-                        rep(0, nrow(subject_test)), 
-                        x_test, y_test)
-names(test) <-          c("Subject", "Group" , features[,2] , "Activity")
+                        rep(0, nrow(subject_test)), y_test, 
+                        x_test)
+
 
 #Now the same thing for train!
 subject_train <-        read.table("./UCI HAR Dataset/train/subject_train.txt", 
@@ -44,14 +45,16 @@ x_train <-              read.table("./UCI HAR Dataset/train/X_train.txt",
 #column represents activity_label from 1 to 6
 y_train <-              read.table("./UCI HAR Dataset/train/Y_train.txt", 
                         stringsAsFactors = FALSE)
-train <-                cbind(subject_train, x_train, y_train)
+train <-                cbind(subject_train, y_train,x_train )
 
 
 ###################################################################################################            
 #4. Appropriately labels the data set with descriptive variable names. 
 #done as second step
 ###################################################################################################
-names(train) <- c("Subject", "Group" , features[,2] , "Activity")
+
+colnames(test) <-  c("Subject", "Group" , "Activity", features[,2])
+colnames(train) <- c("Subject", "Group" , "Activity", features[,2])
 
 dataframe <- rbind(test,train)
 
@@ -59,37 +62,35 @@ dataframe <- rbind(test,train)
 #remove variables in the working environment to free some memory space
 rm("url","subject_test", "x_test", "y_test", 
    "test", "subject_train", "x_train", "y_train", 
-   "activity_label", "features", "train")
+   "activity_labels", "features", "train")
 
 ###################################################################################################
 #2, Extracts only the measurements on the mean and standard deviation for each measurement
 # as well as subject and activity column
 ###################################################################################################
-#THIS PROCESS UNFORTUNATELY DISTORTS THE COLUMNNAMES 
-library(dplyr)
-subset <- dataframe %>% select(Subject, Activity, contains("mean"), contains("std"))
 
-subset <- data.frame(subset)
-subset[,2] <- as.character(subset[,2])
+subset <- cbind(dataframe[,c(1,3)], dataframe[,grepl("mean", colnames(dataframe)) | grepl("std", colnames(dataframe))])
 
 ###################################################################################################
 #3. Uses descriptive activity names to name the activities in the data set
 #this is done with as simple for loop - brute force coding
 ###################################################################################################
+
 l <- nrow(subset)
+
 for (i in 1:l)
 {
-      if( subset[i,2] == "1"){
+      if( subset[i,2] == 1){
             subset[i,2] <- "walking"
-      }else if(subset[i,2] == "2"){
+      }else if(subset[i,2] == 2){
             subset[i,2] <- "walking_upstairs"
-      }else if(subset[i,2] == "3"){
+      }else if(subset[i,2] == 3){
             subset[i,2] <- "walking_downstairs"
-      }else if(subset[i,2] == "4"){
+      }else if(subset[i,2] == 4){
             subset[i,2] <- "sitting"
-      }else if(subset[i,2] == "5"){
+      }else if(subset[i,2] == 5){
             subset[i,2] <- "standing"
-      }else if(subset[i,2] == "6"){
+      }else if(subset[i,2] == 6){
             subset[i,2] <- "laying"
       }else{
             subset[i,3] <- NA
@@ -101,13 +102,13 @@ for (i in 1:l)
 #5. From the data set in step above, creates a second, independent tidy data set with 
 #the average of each variable for each activity  and each subject.
 ###################################################################################################
-detach("package:dplyr")
-library(plyr)
+
 tidy_data <- ddply(subset, .(Subject, Activity), numcolwise(mean))
 
+#column variables not clearly specified in the features help file are excluded from the tidy
+#data set like ..BodyBody.. variable names as well as  ..MeanFreq.. variable names
+tidy_data <- tidy_data[,!(grepl("BodyBody", colnames(tidy_data)) | grepl("meanFreq", colnames(tidy_data)))]
 
-#upload the tidy data set as .txt file created with write.table() using 
-#row.name = FALSE (do not cut and paste a dataset int the text box, as 
-#this may cause errors saving your submission)
-
-write.table(tidy_data, file = "tidy_data2.txt", row.names = FALSE)
+#saving the tidy data set as .txt file created with write.table() using 
+#row.name = FALSE 
+write.table(tidy_data, file = "tidydata.txt", row.names = FALSE)
