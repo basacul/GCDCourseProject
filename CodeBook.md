@@ -120,7 +120,7 @@ source url includes.
 | fBodyGyro.std...X | Standard deviation of the frequency of the body's gyroscope measurement in the x-axis                
 | fBodyGyro.std...Y | Standard deviation of the frequency of the body's gyroscope measurement in the y-axis                 
 | fBodyGyro.std...Z | Standard deviation of the frequency of the body's gyroscope measurement in the z-axis                 
-| fBodyAccMag.std.. | Standard deviation of the frequency of the body's acceleration magnitude                  
-| fBodyBodyAccJerkMag.std.. | Standard deviation of the frequency of the body's jerk acceleration magnitude    
-| fBodyBodyGyroMag.std.. | Standard deviation of the frequency of the body's gyroscope measurement magnitude            
-| fBodyBodyGyroJerkMag.std.. | Standard deviation of the frequency of the body's jerk gyroscope measurement magnitude
+| fBodyAccMag.std.. | Standard deviation of the frequency's signal magnitude of the body's acceleration                  
+| fBodyBodyAccJerkMag.std.. | Standard deviation of the frequency's signal magnitude of the body's jerk acceleration    
+| fBodyBodyGyroMag.std.. | Standard deviation of the frequency's signal magnitude of the body's gyroscope measurement           
+| fBodyBodyGyroJerkMag.std.. | Standard deviation of the frequency's signal magnitude of the body's jerk gyroscope measurement
