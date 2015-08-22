@@ -30,6 +30,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 5.Renames the activity labels from a numeric value to a character sting of the six activities which were all done by each subject (walking, walking upstairs, walking downstairs, sitting, standing or laying). 
   
-6.Creates a tidy data set with the mean value for each variable according to the subject and activity, such that a 180 rows X 81 columns data set is created. It consists of variable names that measure the mean or the standard deviation and moreover are clearly specified in the features help text file provided by the downloaded data set.
+6.Creates a tidy data set with the mean value for each variable according to the subject and activity, such that a 180 rows X 81 columns data set is created. It consists of variable names that measure the mean or the standard deviation and moreover are clearly specified in the features info text file provided by the downloaded data set.
 
 7.Saves the tidy data set as a text file named tidydata.txt
