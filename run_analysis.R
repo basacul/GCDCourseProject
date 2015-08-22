@@ -105,8 +105,8 @@ for (i in 1:l)
 
 tidy_data <- ddply(subset, .(Subject, Activity), numcolwise(mean))
 
-#column variables not clearly specified in the features help file are excluded from the tidy
-#data set like ..BodyBody.. variable names as well as  ..MeanFreq.. variable names
+#column variables which seem not to be useful after reading the features help file are 
+#excluded from the tidy data set like ..BodyBody..  as well as  ..MeanFreq.. variable names
 tidy_data <- tidy_data[,!(grepl("BodyBody", colnames(tidy_data)) | grepl("meanFreq", colnames(tidy_data)))]
 
 #saving the tidy data set as .txt file created with write.table() using 
