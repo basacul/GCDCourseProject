@@ -1,7 +1,7 @@
 # CodeBook
 ====================================================================================
 This codebook describes the source of the data, the processing of the data,
-and especially the variables of the output data set of run_analysis.R : 
+and especially the variable names of the output data set of run_analysis.R : 
 the tidydata.txt file.
 
 ## 1. Data Source
@@ -10,40 +10,21 @@ the tidydata.txt file.
 Downloaded source:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The dataset from the link above carries the data collected from the accelerometers from 
-the Samsung Galaxy S smartphone during an experiment carried out with a group of
-30 volunteers within an age bracket of 19 - 48 years. Six activities were performed
-(walking, walking upstairs, walking downstairs, sitting, standing and laying) wearing
-a Samsung Galaxy S II on the waist.
+The dataset from the link above carries the data collected from the accelerometers and gyroscope measurements from the Samsung Galaxy S smartphone during an experiment carried out with a group of 30 volunteers within an age bracket of 19 - 48 years. Six activities were performed (walking, walking upstairs, walking downstairs, sitting, standing and laying) wearing a Samsung Galaxy S II on the waist.
 
-In the README.txt file of the downloaded dataset you can find further information 
-about what is provided for each record as well as which files the dataset from the 
-source url includes.
+In the README.txt file of the downloaded dataset you can find further information about what is provided for each record as well as which files the dataset from the source url includes.
 
 ## 2. Transformation of the data
 ----------------------------------
 
-1. Merging of the training and test sets into one data set without considering its
-   subfolders (which can be found in each test and train directory)
-2. Naming of the variable names in the data set as found in the features.txt file 
-   of the source dataset 
+1. Merging of the training and test sets into one data set without considering its subfolders (which can be found in each test and train directory)
+2. Naming of the variable names in the data set as found in the features.txt file of the source dataset 
 3. Extraction of all variable names containing 'mean' or 'std'
-4. Appropriate labeling of the activities with one of the six activities mentioned  
-   above 
-5. Calculation of the mean for each subject and activity and creation of a new
-   tidy data set called tidydata.txt with clearly specified variable names in the features
-   help text file
+4. Appropriate labeling of the activities with one of the six activities mentioned above 
+5. Calculation of the mean for each subject and activity and creation of a new tidy data set called tidydata.txt with clearly specified and useful variable names described in the features info text file
    
 ## 3. Variable Descriptions
 -----------------------------
-Measurment | Units
--------------------
-| Frequency | Hz (1/second)
-| Acceleration | meter / second^2
-| Angular Acceleration | degree / second
-| Gravity | g (9.81 meter / second^2)
-| Gyroscope Measurment | 
-
 
 | Variable | Description
 -----------|-------------
