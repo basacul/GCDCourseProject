@@ -11,7 +11,7 @@ This repository consists of the following files:
 
 3. run_analysis.R : This script allows to download the data set from an experiment, where 30 participants concluded 6 different activites measured with a Samsung Galaxy SII smartphone. The script creates a new tidy data set saved as a text file tidydata.txt
 
-4. tidydata : A .txt file consisting of the tidy data set created with run_analysis.R as output with 180 rows and 62 columns. The columns variables are described in the CodeBook.md and only variables names measuring the mean or standard deviation that are clearly specified in the feature help text file were included. The feature help text file comes is included in the downloaded data set.
+4. tidydata : A .txt file consisting of the tidy data set created with run_analysis.R as output with 180 rows and 62 columns. The columns variables are described in the CodeBook.md and only variables names measuring the mean or standard deviation that are clearly specified in the features info text file were included. The features info text file is included in the downloaded data set.
 
 ##How this works
 ------------------
@@ -30,6 +30,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 5.Renames the activity labels from a numeric value to a character sting of the six activities which were all done by each subject (walking, walking upstairs, walking downstairs, sitting, standing or laying). 
   
-6.Creates a tidy data set with the mean value for each variable according to the subject and activity, such that a 180 rows X 81 columns data set is created. It consists of variable names that measure the mean or the standard deviation and moreover are clearly specified in the features info text file provided by the downloaded data set.
+6.Creates a tidy data set with the mean value for each variable according to the subject and activity, such that a 180 rows X 62 columns data set is created. It consists of variable names that measure the mean or the standard deviation and moreover are clearly specified in the features info text file provided by the downloaded data set.
 
 7.Saves the tidy data set as a text file named tidydata.txt

@@ -27,7 +27,7 @@ x_test <-               read.table("./UCI HAR Dataset/test/X_test.txt",
 y_test <-               read.table("./UCI HAR Dataset/test/y_test.txt", 
                         stringsAsFactors = FALSE)
 
-#cbind plus add column indicating that it is a test subject with 0
+#cbind plus add Group column indicating that it is a test subject with 0
 test <-                 cbind(subject_test, 
                         rep(0, nrow(subject_test)), y_test, 
                         x_test)
@@ -37,7 +37,7 @@ test <-                 cbind(subject_test,
 subject_train <-        read.table("./UCI HAR Dataset/train/subject_train.txt", 
                         stringsAsFactors = FALSE)
 
-#add column Group with 0 equals subject is from train group
+#add column Group with 1 representing subject from train group
 subject_train <-        cbind(subject_train, rep(1, nrow(subject_train)))
 x_train <-              read.table("./UCI HAR Dataset/train/X_train.txt", 
                         stringsAsFactors = FALSE)
